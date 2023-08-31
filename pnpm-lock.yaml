@@ -7,6 +7,15 @@ dependencies:
   '@astrojs/vue':
     specifier: ^3.0.0
     version: 3.0.0(@babel/core@7.22.11)(astro@3.0.5)(vite@4.4.9)(vue@3.3.4)
+  '@fontsource-variable/exo-2':
+    specifier: ^5.0.9
+    version: 5.0.9
+  '@fontsource-variable/jetbrains-mono':
+    specifier: ^5.0.9
+    version: 5.0.9
+  '@fontsource/roboto':
+    specifier: ^5.0.8
+    version: 5.0.8
   astro:
     specifier: ^3.0.5
     version: 3.0.5
@@ -816,6 +825,18 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/exo-2@5.0.9:
+    resolution: {integrity: sha512-9bJ8vU4V9hD1VO3OdWh+ekQw1IitMxXkD9XX92zccQ9YTYHNwhx2Nz/HeV+QdJiOlhMaIbdNabh8eSnNpPi28Q==}
+    dev: false
+
+  /@fontsource-variable/jetbrains-mono@5.0.9:
+    resolution: {integrity: sha512-VaF1GjUbSFLJIeTG3WE721IyabL5ghOeseIfPukVrPBo+NNLhfFmHPMO+KH2/KSJ9AO/3/JNMYVkszVAnbMd6Q==}
+    dev: false
+
+  /@fontsource/roboto@5.0.8:
+    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
