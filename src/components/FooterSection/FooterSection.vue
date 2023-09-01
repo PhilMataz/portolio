@@ -13,52 +13,123 @@
       <div class="flex justify-center mt-12">
         <div class="flex items-center mr-8">
           <FooterSectionEnvelopeIcon></FooterSectionEnvelopeIcon>
-          <a
+          <BaseLink
             href="mailto:phillip.matambanadzo@kisscoders.ruhr"
-            class="text-stone-50 font-jetbrains ml-4 font-normal"
-            >Write me</a
-          >
+            title="Write me"
+            class="text-stone-50 ml-4"
+          />
         </div>
         <div class="flex items-center">
           <FooterSectionWhatsappIcon></FooterSectionWhatsappIcon>
-          <a
+          <BaseLink
             href="https://wa.me/4915906562753"
             target="_blank"
-            class="text-stone-50 font-jetbrains ml-4 font-normal"
-            >+49 1590 656 2753</a
-          >
+            title="+49 1590 656 2753"
+            class="text-stone-50 ml-4"
+          />
         </div>
       </div>
     </div>
     <div
       class="mt-40 relative max-w-screen-lg w-full mx-auto after:absolute after:bottom-0 after:w-full after:h-3 after:block after:left-0 after:max-w-screen-lg after:mx-auto after:rounded-b-lg after:border-red-400 after:border after:border-t-0"
     >
-      <div class="text-sm text-gray-500 px-2 pb-1 flex justify-between">
+      <div class="z-5 text-sm text-gray-500 px-2 pb-1 flex justify-between">
         <p class="inline-flex items-end">&copy; Phillip Matambanadzo - 2023</p>
         <p class="w-1/3 text-justify">
           Handcrafted from scratch in
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">Figma</a>,
-          coded in
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">VSCode</a>,
-          by yours truly. Built using
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">Astro</a>
+          <BaseLink
+            target="_blank"
+            href="https://figma.com"
+            class="font-jetbrains text-gray-400 text-xxs"
+            title="Figma"
+          ></BaseLink
+          >, coded in
+          <BaseLink
+            target="_blank"
+            href="https://code.visualstudio.com"
+            title="VSCode"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink
+          >, by yours truly. Built using
+          <BaseLink
+            target="_blank"
+            href="https://astro.build/"
+            title="Astro"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink>
           and
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">Tailwind</a>,
-          and rolled out on
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">Netlify</a>.
-          Fonts chosen are
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">Roboto</a>,
-          <a href="" class="font-jetbrains text-gray-400 text-xxs"
-            >JetBrains Mono</a
-          >
+          <BaseLink
+            target="_blank"
+            href="https://tailwindcss.com/"
+            title="Tailwind"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink
+          >, and rolled out on
+          <BaseLink
+            target="_blank"
+            href="https://www.netlify.com/"
+            title="Netlify"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink
+          >. Fonts chosen are
+          <BaseLink
+            target="_blank"
+            href="https://fonts.google.com/specimen/Roboto"
+            title="Roboto"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink
+          >,
+          <BaseLink
+            target="_blank"
+            href="https://fonts.google.com/specimen/Exo+2"
+            :title="`Exo\xa02`"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink>
           and
-          <a href="" class="font-jetbrains text-gray-400 text-xxs">Exo 2</a>.
+          <BaseLink
+            target="_blank"
+            href="https://fonts.google.com/specimen/JetBrains+Mono"
+            :title="`JetBrains\xa0Mono`"
+            class="font-jetbrains text-gray-400 text-xxs"
+          ></BaseLink
+          >.
         </p>
       </div>
     </div>
   </section>
 </template>
 <script lang="ts" setup>
+import { ref } from "vue";
 import FooterSectionEnvelopeIcon from "./FooterSectionEnvelopeIcon.vue";
 import FooterSectionWhatsappIcon from "./FooterSectionWhatsappIcon.vue";
+import BaseLink from "../BaseLink.vue";
+
+const ORIGINAL_LINK_TEXT = "+49 1590 656 2753";
+
+const linkText = ref(ORIGINAL_LINK_TEXT);
+
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567891" as const;
+let interval: number | null = null;
+
+const handleMouseOver = (event: MouseEvent) => {
+  let iterations = 0;
+  interval = setInterval(() => {
+    linkText.value = linkText.value
+      .split("")
+      .map((_, index) => {
+        if (index < iterations) {
+          return ORIGINAL_LINK_TEXT[index];
+        }
+        return LETTERS[Math.floor(Math.random() * LETTERS.length)];
+      })
+      .join("");
+    if (iterations >= ORIGINAL_LINK_TEXT.length && interval)
+      clearInterval(interval);
+    iterations += 1 / 2;
+  }, 30);
+};
+const handleMouseLeave = () => {
+  linkText.value = ORIGINAL_LINK_TEXT;
+  if (interval) clearInterval(interval);
+};
 </script>

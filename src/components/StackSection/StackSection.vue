@@ -30,7 +30,6 @@ const rootElement = ref(null);
 let observer: IntersectionObserver | null = null;
 
 onMounted(() => {
-  console.log("mounted");
   const options = {
     root: null,
     rootMargin: "0px 0px -100% 0px",
