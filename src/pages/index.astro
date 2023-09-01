@@ -4,13 +4,59 @@ import Card from "../components/Card.vue";
 ---
 
 <Layout title="Phil Mataz">
-  <header>
-    <nav></nav>
-    <h1 class="font-exo-2">Phillip Matambanadzo</h1>
-    <p>Senior Frontend Developer | UI/UX Advocate</p>
-    <p class="font-roboto">
-      Turning visions into interactive realities with precision and flair.
-    </p>
+  <!-- Hero Section with Navigation -->
+  <header
+    class="fixed w-screen after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-red-400 after:border after:border-b-0"
+  >
+    <div class="backdrop-blur-sm w-full">
+      <nav
+        class="w-full max-w-screen-lg mx-auto font-jetbrains font-normal h-16 flex justify-end items-center"
+      >
+        <a href="#about" class="px-4">About Me</a>
+        <a href="#tech-stack" class="px-4">My Stack</a>
+        <a href="#projects" class="px-4">Projects</a>
+        <a href="#contact" class="pl-4">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main></main>
+  <main class="">
+    <section id="hero" class="pt-48 max-w-screen-sm mx-auto h-screen">
+      <h1 class="font-exo-2 font-bold text-7xl">Hi, I'm Phil.</h1>
+      <p class="text-3xl text-gray-600">
+        I turn <span class="text-red-400">visions</span> into interactive
+        realities with <span class="text-red-400">precision</span> and <span
+          class="text-red-400">flair</span
+        >.
+      </p>
+      <p class="mt-10 leading-8 text-gray-600">
+        With 6 years of experience as a <span class="text-red-400 font-normal"
+          >Frontend Developer</span
+        >, I specialize in transforming intricate challenges into intuitive,
+        user-friendly solutions. My work is not just about writing code; it's
+        about writing the future of businesses, one line at a time. While my
+        core expertise lies in frontend development, my interests in <span
+          class="text-red-400 font-normal">UI/UX</span
+        >, <span class="text-red-400 font-normal">blockchain technology</span>,
+        and even <span class="text-red-400 font-normal">dance</span>, add a
+        unique flavor to my approach. Let's build something extraordinary
+        together.
+      </p>
+    </section>
+    <section
+      class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center"
+    >
+      <h2 class="text-center font-exo-2 font-bold text-4xl">Recent Projects</h2>
+      <hr class="w-24 h-px my-4 bg-red-400 border-0" />
+      <p class="text-center font-light">
+        Always evolving, always learning.<br /> I continuously update my skill
+        set to offer cutting-edge solutions.
+      </p>
+      <div class="grid grid-rows-2 grid-cols-2 gap-2 w-full mt-12">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </section>
+  </main>
 </Layout>
