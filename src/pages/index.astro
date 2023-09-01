@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectSection from "../components/ProjectSection/ProjectSection.vue";
-import StackSection from "../components/StackSection.vue/StackSection.vue";
+import StackSection from "../components/StackSection/StackSection.vue";
+import ReferenceSection from "../components/ReferenceSection/ReferenceSection.vue";
 ---
 
 <Layout title="Phil Mataz">
   <!-- Hero Section with Navigation -->
   <header
-    class="fixed w-screen after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-red-400 after:border after:border-b-0"
+    class="z-10 fixed w-screen after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-red-400 after:border after:border-b-0"
   >
     <div class="backdrop-blur-sm w-full">
       <nav
@@ -45,5 +46,6 @@ import StackSection from "../components/StackSection.vue/StackSection.vue";
     </section>
     <ProjectSection />
     <StackSection />
+    <ReferenceSection />
   </main>
 </Layout>
