@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-900 pt-12 pb-4">
+  <section class="bg-gray-900 pt-12 pb-4 px-2 sm:px-0">
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
         Let’s craft digital excellence
@@ -10,8 +10,8 @@
         frontend trends, I'm here. Reach out, and let's embark on a digital
         journey together.
       </p>
-      <div class="flex justify-center mt-12">
-        <div class="flex items-center mr-8">
+      <div class="flex justify-center mt-12 flex-col sm:flex-row">
+        <div class="flex items-center mr-8 mb-4 sm:mb-0">
           <FooterSectionEnvelopeIcon></FooterSectionEnvelopeIcon>
           <BaseLink
             href="mailto:phillip.matambanadzo@kisscoders.ruhr"
@@ -33,9 +33,11 @@
     <div
       class="mt-40 relative max-w-screen-lg w-full mx-auto after:absolute after:bottom-0 after:w-full after:h-3 after:block after:left-0 after:max-w-screen-lg after:mx-auto after:rounded-b-lg after:border-red-400 after:border after:border-t-0"
     >
-      <div class="z-5 text-sm text-gray-500 px-2 pb-1 flex justify-between">
+      <div
+        class="z-5 text-sm text-gray-500 px-2 pb-1 flex justify-between flex-col-reverse sm:flex-row"
+      >
         <p class="inline-flex items-end">&copy; Phillip Matambanadzo - 2023</p>
-        <p class="w-1/3 text-justify">
+        <p class="sm:w-1/3 w-4/5 text-justify mx-auto sm:mx-0 mb-12">
           Handcrafted from scratch in
           <BaseLink
             target="_blank"

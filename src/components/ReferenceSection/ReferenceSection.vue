@@ -1,6 +1,6 @@
 <template>
   <section
-    class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center"
+    class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center px-2 sm:px-0"
   >
     <h2 class="text-center font-exo-2 font-bold text-4xl">
       Don't just take my word for it
@@ -9,8 +9,8 @@
     <p class="text-center font-light">
       Hear from those who've experienced my craft firsthand.
     </p>
-    <div class="grid grid-cols-2 gap-12 max-w-screen-md mt-12">
-      <div class="relative px-4 pt-8">
+    <div class="sm:grid sm:grid-cols-2 sm:gap-12 max-w-screen-md mt-12">
+      <div class="relative px-4 pt-8 mb-8 sm:mb-0">
         <span
           class="text-9xl font-exo-2 font-bold absolute top-0 left-0 text-gray-700"
           >“</span
