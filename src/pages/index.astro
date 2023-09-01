@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.vue";
+import ProjectSection from "../components/ProjectSection/ProjectSection.vue";
 ---
 
 <Layout title="Phil Mataz">
@@ -42,21 +42,6 @@ import Card from "../components/Card.vue";
         together.
       </p>
     </section>
-    <section
-      class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center"
-    >
-      <h2 class="text-center font-exo-2 font-bold text-4xl">Recent Projects</h2>
-      <hr class="w-24 h-px my-4 bg-red-400 border-0" />
-      <p class="text-center font-light">
-        Always evolving, always learning.<br /> I continuously update my skill
-        set to offer cutting-edge solutions.
-      </p>
-      <div class="grid grid-rows-2 grid-cols-2 gap-2 w-full mt-12">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-    </section>
+    <ProjectSection />
   </main>
 </Layout>
