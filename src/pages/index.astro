@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 import HeaderSection from "../components/HeaderSection/HeaderSection.vue";
-import HeroSection from "../components/HeroSection/HeroSection.vue";
+import HeroSection from "../components/HeroSection/HeroSection.astro";
 import ProjectSection from "../components/ProjectSection/ProjectSection.vue";
 import StackSection from "../components/StackSection/StackSection.vue";
 import ReferenceSection from "../components/ReferenceSection/ReferenceSection.vue";
@@ -18,5 +18,6 @@ import FooterSection from "../components/FooterSection/FooterSection.vue";
     <StackSection client:visible />
     <ReferenceSection />
   </main>
-  <FooterSection client:visible />
+  <FooterSection client:only />
 </Layout>
+<script src="../scripts/lenis.ts"></script>

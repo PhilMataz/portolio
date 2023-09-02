@@ -13,21 +13,25 @@
           :href="href"
           class="px-4"
           client:load
+          @click.prevent="handleClick(href)"
         ></BaseLink>
       </nav>
     </div>
   </header>
 </template>
 <script lang="ts" setup>
+import { ref, onMounted } from "vue";
 import BaseLink from "../BaseLink.vue";
 import { useObserver } from "../../composables/useObserver";
+
+let lenis = ref(null);
 
 const { isIntersecting } = useObserver();
 
 const BASE_LINKS = [
   {
     title: "About Me",
-    href: "#about",
+    href: "#hero",
   },
   {
     title: "Projects",
@@ -35,11 +39,23 @@ const BASE_LINKS = [
   },
   {
     title: "My Stack",
-    href: "#my-stack",
+    href: "#stack",
   },
   {
     title: "Contact",
     href: "#contact",
   },
 ];
+
+onMounted(() => {
+  import("../../scripts/lenis").then((module) => {
+    lenis.value = module.lenis;
+  });
+});
+
+const handleClick = (target) => {
+  if (lenis.value) {
+    lenis.value.scrollTo(target, { offset: -64 });
+  }
+};
 </script>

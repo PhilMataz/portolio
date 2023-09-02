@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-900 pt-12 pb-4 px-2">
+  <section id="contact" class="bg-gray-900 pt-12 pb-4 px-2">
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
         Let’s craft digital excellence
@@ -34,26 +34,33 @@
       <div
         class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-red-400 after:border after:border-t-0"
       >
-        <div
-          class="grid grid-cols-3 gap-6 w-fit mx-auto mb-12 lg:mb-7 lg:fixed lg:left lg:bottom-0 lg:grid-cols-1 lg:grid-rows-3 lg:-translate-x-1/2"
-        >
-          <a href="">
-            <FooterSectionInstagramIcon
-              class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
-            ></FooterSectionInstagramIcon>
-          </a>
-          <a href="">
-            <FooterSectionLinkedInIcon
-              class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
-            ></FooterSectionLinkedInIcon>
-          </a>
-          <a href="">
-            <FooterSectionXIcon
-              class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
-            ></FooterSectionXIcon>
-          </a>
-          <div class="h-20 w-px bg-red-400 ml-[50%] hidden lg:block"></div>
-        </div>
+        <Transition name="fade">
+          <div
+            class="grid grid-cols-3 gap-6 w-fit mx-auto mb-12 lg:mb-7 lg:fixed lg:left lg:bottom-0 lg:grid-cols-1 lg:grid-rows-3 lg:-translate-x-1/2 transition-opacity"
+            :class="{
+              'opacity-100': scrollProgress > 0.1,
+              'opacity-0': scrollProgress <= 0.1,
+            }"
+          >
+            <a href="">
+              <FooterSectionInstagramIcon
+                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
+              ></FooterSectionInstagramIcon>
+            </a>
+            <a href="">
+              <FooterSectionLinkedInIcon
+                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
+              ></FooterSectionLinkedInIcon>
+            </a>
+            <a href="">
+              <FooterSectionXIcon
+                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
+              ></FooterSectionXIcon>
+            </a>
+            <div class="h-20 w-px bg-red-400 ml-[50%] hidden lg:block"></div>
+          </div>
+        </Transition>
+
         <div
           class="z-5 text-sm text-gray-500 px-2 pb-1 flex justify-between flex-col-reverse sm:flex-row"
         >
@@ -131,4 +138,12 @@ import FooterSectionInstagramIcon from "./FooterSectionInstagramIcon.vue";
 import FooterSectionLinkedInIcon from "./FooterSectionLinkedInIcon.vue";
 import FooterSectionXIcon from "./FooterSectionXIcon.vue";
 import BaseLink from "../BaseLink.vue";
+import { lenis } from "../../scripts/lenis";
+import { ref } from "vue";
+
+const scrollProgress = ref(0);
+
+lenis.on("scroll", ({ progress }: { progress: number }) => {
+  scrollProgress.value = progress;
+});
 </script>

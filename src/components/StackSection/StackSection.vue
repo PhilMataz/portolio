@@ -1,5 +1,9 @@
 <template>
-  <section ref="rootElement" class="bg-gray-900 pt-12 pb-24 px-2 lg:px-0">
+  <section
+    id="stack"
+    ref="rootElement"
+    class="bg-gray-900 pt-12 pb-24 px-2 lg:px-0"
+  >
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
         Tech Stack

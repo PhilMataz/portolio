@@ -1,5 +1,6 @@
 <template>
   <section
+    id="projects"
     class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center px-2 lg:px-0"
   >
     <h2 class="text-center font-exo-2 font-bold text-4xl">Recent Projects</h2>
