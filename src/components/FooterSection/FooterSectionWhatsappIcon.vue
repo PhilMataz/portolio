@@ -1,9 +1,9 @@
 <template>
   <div
-    class="w-12 h-12 rounded-full bg-stone-50 inline-flex items-center justify-center"
+    class="w-10 h-10 rounded-full bg-gray-700 inline-flex items-center justify-center"
   >
     <svg
-      class="fill-gray-700"
+      class="fill-gray-400 hover:translate-x-0.5 hover:-translate-y-0.5 transition-transform"
       width="32"
       height="32"
       viewBox="0 0 64 64"

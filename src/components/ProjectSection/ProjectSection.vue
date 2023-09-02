@@ -4,7 +4,7 @@
     class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center px-2 lg:px-0"
   >
     <h2 class="text-center font-exo-2 font-bold text-4xl">Recent Projects</h2>
-    <hr class="w-24 h-px my-4 bg-red-400 border-0" />
+    <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
     <p class="text-center font-light">
       Always evolving, always learning.<br />
       I continuously update my skill set to offer cutting-edge solutions.

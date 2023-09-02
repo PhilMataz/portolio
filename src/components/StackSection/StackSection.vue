@@ -8,7 +8,7 @@
       <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
         Tech Stack
       </h2>
-      <hr class="w-24 h-px my-4 bg-red-400 border-0" />
+      <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
       <p class="text-center font-light text-gray-50">
         Always evolving, always learning.<br />
         I continuously update my skill set to offer cutting-edge solutions.
@@ -17,7 +17,7 @@
         <StackSection
           v-for="icon in ICONS"
           :name="icon"
-          class="fill-red-400 w-1/4 md:w-[calc(100%/7)] mt-8"
+          class="fill-rose-400 w-1/4 md:w-[calc(100%/7)] mt-8"
         />
       </div>
     </div>

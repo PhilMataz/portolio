@@ -1,6 +1,6 @@
 <template>
   <header
-    class="z-10 fixed w-screen after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-red-400 after:border after:border-b-0"
+    class="z-10 fixed w-screen after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-rose-400 after:border after:border-b-0"
   >
     <div class="backdrop-blur-sm w-full">
       <nav

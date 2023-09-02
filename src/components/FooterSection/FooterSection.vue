@@ -4,7 +4,7 @@
       <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
         Let’s craft digital excellence
       </h2>
-      <hr class="w-24 h-px my-4 bg-red-400 border-0" />
+      <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
       <p class="text-center font-light text-gray-50 max-w-lg">
         Whether it's a new project, a revamp, or just a chat about the latest in
         frontend trends, I'm here. Reach out, and let's embark on a digital
@@ -16,7 +16,7 @@
           <BaseLink
             href="mailto:phillip.matambanadzo@kisscoders.ruhr"
             title="Write me"
-            class="text-stone-50 ml-4"
+            class="text-gray-400 ml-4"
           />
         </div>
         <div class="flex items-center">
@@ -25,14 +25,14 @@
             href="https://wa.me/4915906562753"
             target="_blank"
             title="+49 1590 656 2753"
-            class="text-stone-50 ml-4"
+            class="text-gray-400 ml-4"
           />
         </div>
       </div>
     </div>
     <div class="mt-40 px-0 lg:px-4 relative max-w-screen-lg w-full mx-auto">
       <div
-        class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-red-400 after:border after:border-t-0"
+        class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-rose-400 after:border after:border-t-0"
       >
         <Transition name="fade">
           <div
@@ -44,20 +44,20 @@
           >
             <a href="">
               <FooterSectionInstagramIcon
-                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
+                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-rose-400 lg:hover:fill-rose-300"
               ></FooterSectionInstagramIcon>
             </a>
             <a href="">
               <FooterSectionLinkedInIcon
-                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
+                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-rose-400 lg:hover:fill-rose-300"
               ></FooterSectionLinkedInIcon>
             </a>
             <a href="">
               <FooterSectionXIcon
-                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-red-400 lg:hover:fill-red-300"
+                class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-rose-400 lg:hover:fill-rose-300"
               ></FooterSectionXIcon>
             </a>
-            <div class="h-20 w-px bg-red-400 ml-[50%] hidden lg:block"></div>
+            <div class="h-20 w-px bg-rose-400 ml-[50%] hidden lg:block"></div>
           </div>
         </Transition>
 
