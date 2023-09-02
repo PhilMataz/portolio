@@ -1,7 +1,7 @@
 <template>
   <section
     id="hero"
-    class="pt-40 sm:pt-48 max-w-screen-sm mx-auto h-screen px-2 sm:px-0"
+    class="pt-40 sm:pt-48 max-w-screen-sm mx-auto h-screen px-2 lg:px-0"
   >
     <h1 class="font-exo-2 font-bold text-6xl sm:text-7xl">Hi, I'm Phil.</h1>
     <p class="text-2xl sm:text-3xl text-gray-600">

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center px-2 sm:px-0"
+    class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center px-2 lg:px-0"
   >
     <h2 class="text-center font-exo-2 font-bold text-4xl">Recent Projects</h2>
     <hr class="w-24 h-px my-4 bg-red-400 border-0" />
@@ -8,7 +8,7 @@
       Always evolving, always learning.<br />
       I continuously update my skill set to offer cutting-edge solutions.
     </p>
-    <div class="grid sm:grid-rows-2 sm:grid-cols-2 gap-2 w-full mt-12">
+    <div class="grid sm:grid-rows-2 sm:grid-cols-2 gap-2 w-full mt-12 lg:px-12">
       <ProjectSectionCard
         v-for="project in projects"
         :name="project.name"
