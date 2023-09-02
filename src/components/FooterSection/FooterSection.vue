@@ -28,36 +28,12 @@
       <div
         class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-rose-400 after:border after:border-t-0"
       >
-        <div
-          class="grid grid-cols-3 gap-6 w-fit mx-auto mb-12 lg:mb-7 lg:fixed lg:left lg:bottom-0 lg:grid-cols-1 lg:grid-rows-3 lg:-translate-x-1/2 transition-opacity"
+        <FooterSectionSocials
           :class="{
             'opacity-100': scrollProgress > 0.1,
             'opacity-0': scrollProgress <= 0.1,
           }"
-        >
-          <a href="">
-            <BaseIcon
-              icon="instagram"
-              size="sm"
-              class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-rose-400 lg:hover:fill-rose-300"
-            ></BaseIcon>
-          </a>
-          <a href="">
-            <BaseIcon
-              icon="linkedIn"
-              size="sm"
-              class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-rose-400 lg:hover:fill-rose-300"
-            ></BaseIcon>
-          </a>
-          <a href="">
-            <BaseIcon
-              icon="x"
-              size="sm"
-              class="fill-gray-500 hover:fill-gray-400 transition-colors lg:fill-rose-400 lg:hover:fill-rose-300"
-            ></BaseIcon>
-          </a>
-          <div class="h-20 w-px bg-rose-400 ml-[50%] hidden lg:block"></div>
-        </div>
+        />
 
         <div
           class="z-5 text-sm text-gray-500 px-2 pb-1 flex justify-between flex-col-reverse sm:flex-row"
@@ -131,8 +107,9 @@
 </template>
 <script lang="ts" setup>
 import FooterSectionContactLink from "./FooterSectionContactLink.vue";
+import FooterSectionSocials from "./FooterSectionSocials.vue";
 import BaseLink from "../BaseLink.vue";
-import BaseIcon from "../BaseIcon.vue";
+
 import { lenis } from "../../scripts/lenis";
 import { ref } from "vue";
 
