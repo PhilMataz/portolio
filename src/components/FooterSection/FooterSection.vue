@@ -11,23 +11,17 @@
         journey together.
       </p>
       <div class="flex justify-center mt-12 flex-col sm:flex-row">
-        <div class="flex items-center mr-8 mb-4 sm:mb-0">
-          <FooterSectionEnvelopeIcon></FooterSectionEnvelopeIcon>
-          <BaseLink
-            href="mailto:phillip.matambanadzo@kisscoders.ruhr"
-            title="Write me"
-            class="text-gray-400 ml-4"
-          />
-        </div>
-        <div class="flex items-center">
-          <FooterSectionWhatsappIcon></FooterSectionWhatsappIcon>
-          <BaseLink
-            href="https://wa.me/4915906562753"
-            target="_blank"
-            title="+49 1590 656 2753"
-            class="text-gray-400 ml-4"
-          />
-        </div>
+        <FooterSectionContactLink
+          class="mr-8 mb-4 sm:mb-0"
+          title="Write me"
+          href="mailto:phillip.matambanadzo@kisscoders.ruhr"
+          icon="envelope"
+        ></FooterSectionContactLink>
+        <FooterSectionContactLink
+          title="+49 1590 656 2753"
+          href="https://wa.me/4915906562753"
+          icon="whatsapp"
+        ></FooterSectionContactLink>
       </div>
     </div>
     <div class="mt-40 px-0 lg:px-4 relative max-w-screen-lg w-full mx-auto">
@@ -136,6 +130,7 @@ import FooterSectionEnvelopeIcon from "./FooterSectionEnvelopeIcon.vue";
 import FooterSectionWhatsappIcon from "./FooterSectionWhatsappIcon.vue";
 import FooterSectionInstagramIcon from "./FooterSectionInstagramIcon.vue";
 import FooterSectionLinkedInIcon from "./FooterSectionLinkedInIcon.vue";
+import FooterSectionContactLink from "./FooterSectionContactLink.vue";
 import FooterSectionXIcon from "./FooterSectionXIcon.vue";
 import BaseLink from "../BaseLink.vue";
 import { lenis } from "../../scripts/lenis";
