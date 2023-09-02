@@ -7,21 +7,39 @@
         class="w-full max-w-screen-lg mx-auto font-jetbrains font-normal h-16 flex justify-end items-center ease-in-out transition-colors duration-100"
         :class="isIntersecting ? 'text-stone-50' : 'text-gray-700'"
       >
-        <BaseLink title="About Me" href="#about" class="px-4"></BaseLink>
-        <BaseLink title="Projects" href="#projects" class="px-4"></BaseLink>
-        <BaseLink title="My Stack" href="#my-stack" class="px-4"></BaseLink>
-        <BaseLink title="Contact" href="#contact" class="pl-4"></BaseLink>
+        <BaseLink
+          v-for="{ title, href } in BASE_LINKS"
+          :title="title"
+          :href="href"
+          class="px-4"
+          client:load
+        ></BaseLink>
       </nav>
     </div>
   </header>
 </template>
 <script lang="ts" setup>
 import BaseLink from "../BaseLink.vue";
+import { useObserver } from "../../composables/useObserver";
 
-interface Props {
-  isIntersecting?: boolean;
-}
-withDefaults(defineProps<Props>(), {
-  isIntersecting: false,
-});
+const { isIntersecting } = useObserver();
+
+const BASE_LINKS = [
+  {
+    title: "About Me",
+    href: "#about",
+  },
+  {
+    title: "Projects",
+    href: "#projects",
+  },
+  {
+    title: "My Stack",
+    href: "#my-stack",
+  },
+  {
+    title: "Contact",
+    href: "#contact",
+  },
+];
 </script>

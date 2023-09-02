@@ -1,9 +1,9 @@
 <template>
-  <HeaderSection :isIntersecting="isIntersecting" />
+  <HeaderSection />
   <main>
     <HeroSection />
     <ProjectSection />
-    <StackSection @is-intersecting="handleIntersection" />
+    <StackSection />
     <ReferenceSection />
   </main>
   <FooterSection />
@@ -15,11 +15,4 @@ import ProjectSection from "../components/ProjectSection/ProjectSection.vue";
 import StackSection from "../components/StackSection/StackSection.vue";
 import ReferenceSection from "../components/ReferenceSection/ReferenceSection.vue";
 import FooterSection from "../components/FooterSection/FooterSection.vue";
-import { ref } from "vue";
-
-const isIntersecting = ref(false);
-
-const handleIntersection = (value: boolean) => {
-  isIntersecting.value = value;
-};
 </script>

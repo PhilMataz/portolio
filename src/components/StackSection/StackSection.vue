@@ -23,30 +23,19 @@
 import { onMounted, onUnmounted, ref } from "vue";
 import StackSection from "./StackSectionIcon/StackSectionIcon.vue";
 import { ICONS } from "./enums";
-
-const emit = defineEmits(["isIntersecting"]);
+import { useObserver } from "../../composables/useObserver";
 
 const rootElement = ref(null);
-let observer: IntersectionObserver | null = null;
+const { registerElement, unregisterElement } = useObserver();
 
 onMounted(() => {
-  const options = {
-    root: null,
-    rootMargin: "0px 0px -100% 0px",
-    threshold: 0,
-  };
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        emit("isIntersecting", true);
-      } else {
-        emit("isIntersecting", false);
-      }
-    });
-  }, options);
-  observer.observe(rootElement.value!);
+  if (rootElement.value) {
+    registerElement(rootElement.value);
+  }
 });
 onUnmounted(() => {
-  observer?.disconnect();
+  if (rootElement.value) {
+    unregisterElement(rootElement.value);
+  }
 });
 </script>

@@ -1,6 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HomePage from "./HomePage.vue";
+
+import HeaderSection from "../components/HeaderSection/HeaderSection.vue";
+import HeroSection from "../components/HeroSection/HeroSection.vue";
+import ProjectSection from "../components/ProjectSection/ProjectSection.vue";
+import StackSection from "../components/StackSection/StackSection.vue";
+import ReferenceSection from "../components/ReferenceSection/ReferenceSection.vue";
+
+import FooterSection from "../components/FooterSection/FooterSection.vue";
 ---
 
-<Layout title="Phil Mataz"><HomePage client:load /></Layout>
+<Layout title="Phil Mataz">
+  <HeaderSection client:load />
+  <main>
+    <HeroSection />
+    <ProjectSection />
+    <StackSection client:visible />
+    <ReferenceSection />
+  </main>
+  <FooterSection client:visible />
+</Layout>

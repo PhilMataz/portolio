@@ -101,37 +101,7 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue";
 import FooterSectionEnvelopeIcon from "./FooterSectionEnvelopeIcon.vue";
 import FooterSectionWhatsappIcon from "./FooterSectionWhatsappIcon.vue";
 import BaseLink from "../BaseLink.vue";
-
-const ORIGINAL_LINK_TEXT = "+49 1590 656 2753";
-
-const linkText = ref(ORIGINAL_LINK_TEXT);
-
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567891" as const;
-let interval: number | null = null;
-
-const handleMouseOver = (event: MouseEvent) => {
-  let iterations = 0;
-  interval = setInterval(() => {
-    linkText.value = linkText.value
-      .split("")
-      .map((_, index) => {
-        if (index < iterations) {
-          return ORIGINAL_LINK_TEXT[index];
-        }
-        return LETTERS[Math.floor(Math.random() * LETTERS.length)];
-      })
-      .join("");
-    if (iterations >= ORIGINAL_LINK_TEXT.length && interval)
-      clearInterval(interval);
-    iterations += 1 / 2;
-  }, 30);
-};
-const handleMouseLeave = () => {
-  linkText.value = ORIGINAL_LINK_TEXT;
-  if (interval) clearInterval(interval);
-};
 </script>
