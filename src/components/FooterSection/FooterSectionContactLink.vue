@@ -12,7 +12,8 @@
     >
       <BaseIcon
         class="group-hover:translate-x-px group-hover:-translate-y-px transition-transform"
-        :name="icon"
+        :icon="icon"
+        size="sm"
       ></BaseIcon>
     </div>
     <span class="font-jetbrains font-normal text-gray-400 ml-4">{{

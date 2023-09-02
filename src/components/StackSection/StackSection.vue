@@ -14,9 +14,10 @@
         I continuously update my skill set to offer cutting-edge solutions.
       </p>
       <div class="flex flex-wrap justify-center mt-12">
-        <StackSection
+        <BaseIcon
           v-for="icon in ICONS"
-          :name="icon"
+          :icon="icon"
+          size="lg"
           class="fill-rose-400 w-1/4 md:w-[calc(100%/7)] mt-8"
         />
       </div>
@@ -25,7 +26,7 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import StackSection from "./StackSectionIcon/StackSectionIcon.vue";
+import BaseIcon from "../BaseIcon.vue";
 import { ICONS } from "./enums";
 import { useObserver } from "../../composables/useObserver";
 
