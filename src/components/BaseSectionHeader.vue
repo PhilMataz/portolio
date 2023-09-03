@@ -7,7 +7,7 @@
   </h2>
   <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
   <p
-    class="text-center font-light"
+    class="text-center font-light max-w-lg"
     :class="dark ? 'text-gray-300' : 'text-gray-500'"
   >
     <slot name="sub-header"></slot>

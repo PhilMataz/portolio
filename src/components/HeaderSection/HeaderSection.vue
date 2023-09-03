@@ -1,7 +1,7 @@
 <template>
   <header>
     <div
-      class="z-20 fixed w-screen after:z-10 after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-rose-400 after:border after:border-b-0"
+      class="z-20 fixed w-screen after:z-10 after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-rose-400 after:border after:border-b-0 px-2 sm:px-4"
     >
       <div
         class="backdrop-blur-sm w-full"
@@ -42,7 +42,7 @@
     <Transition>
       <div
         v-if="isMenuOpened"
-        class="z-10 fixed h-screen w-screen backdrop-blur-md flex flex-col justify-between px-2"
+        class="z-10 fixed h-screen w-screen backdrop-blur-md flex flex-col justify-between px-2 sm:hidden"
       >
         <div class="flex flex-col mt-16">
           <BaseLink

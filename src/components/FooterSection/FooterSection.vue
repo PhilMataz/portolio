@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="bg-gray-900 pt-12 pb-4 px-2">
+  <section id="contact" class="bg-gray-900 pt-12 pb-4 px-2 sm:px-4">
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <BaseSectionHeader dark>
         Let’s craft digital excellence
@@ -23,7 +23,7 @@
         ></FooterSectionContactLink>
       </div>
     </div>
-    <div class="mt-40 px-0 lg:px-4 relative max-w-screen-lg w-full mx-auto">
+    <div class="mt-40 relative max-w-screen-lg w-full mx-auto">
       <div
         class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-rose-400 after:border after:border-t-0"
       >

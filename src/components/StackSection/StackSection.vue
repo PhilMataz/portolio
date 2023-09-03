@@ -2,7 +2,7 @@
   <section
     id="stack"
     ref="rootElement"
-    class="bg-gray-900 pt-12 pb-24 px-2 lg:px-0"
+    class="bg-gray-900 pt-12 pb-24 lg:px-0 px-2 sm:px-4"
   >
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <BaseSectionHeader dark>
