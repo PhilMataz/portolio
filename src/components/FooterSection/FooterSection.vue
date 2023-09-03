@@ -1,15 +1,14 @@
 <template>
   <section id="contact" class="bg-gray-900 pt-12 pb-4 px-2">
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
-      <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
+      <BaseSectionHeader dark>
         Let’s craft digital excellence
-      </h2>
-      <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
-      <p class="text-center font-light text-gray-50 max-w-lg">
-        Whether it's a new project, a revamp, or just a chat about the latest in
-        frontend trends, I'm here. Reach out, and let's embark on a digital
-        journey together.
-      </p>
+        <template #sub-header>
+          Whether it's a new project, a revamp, or just a chat about the latest
+          in frontend trends, I'm here. Reach out, and let's embark on a digital
+          journey together.
+        </template>
+      </BaseSectionHeader>
       <div class="flex justify-center mt-12 flex-col sm:flex-row">
         <FooterSectionContactLink
           class="mr-8 mb-4 sm:mb-0"
@@ -109,6 +108,7 @@
 import FooterSectionContactLink from "./FooterSectionContactLink.vue";
 import FooterSectionSocials from "./FooterSectionSocials.vue";
 import BaseLink from "../BaseLink.vue";
+import BaseSectionHeader from "../BaseSectionHeader.vue";
 
 import { lenis } from "../../scripts/lenis";
 import { ref } from "vue";

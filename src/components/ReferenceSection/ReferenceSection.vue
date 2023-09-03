@@ -2,13 +2,12 @@
   <section
     class="pt-12 pb-24 max-w-screen-lg mx-auto flex flex-col items-center px-2 lg:px-0"
   >
-    <h2 class="text-center font-exo-2 font-bold text-4xl">
+    <BaseSectionHeader>
       Don't just take my word for it
-    </h2>
-    <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
-    <p class="text-center font-light">
-      Hear from those who've experienced my craft firsthand.
-    </p>
+      <template #sub-header
+        >Hear from those who've experienced my craft firsthand.</template
+      >
+    </BaseSectionHeader>
     <div class="sm:grid sm:grid-cols-2 sm:gap-12 max-w-screen-md mt-12">
       <div class="relative px-4 pt-8 mb-8 sm:mb-0">
         <span
@@ -59,4 +58,6 @@
     </div>
   </section>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import BaseSectionHeader from "../BaseSectionHeader.vue";
+</script>

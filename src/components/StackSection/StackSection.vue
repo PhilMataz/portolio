@@ -5,14 +5,13 @@
     class="bg-gray-900 pt-12 pb-24 px-2 lg:px-0"
   >
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
-      <h2 class="text-center font-exo-2 font-bold text-4xl text-white">
+      <BaseSectionHeader dark>
         Tech Stack
-      </h2>
-      <hr class="w-24 h-px my-4 bg-rose-400 border-0" />
-      <p class="text-center font-light text-gray-50">
-        Always evolving, always learning.<br />
-        I continuously update my skill set to offer cutting-edge solutions.
-      </p>
+        <template #sub-header>
+          Always evolving, always learning.<br />
+          I continuously update my skill set to offer cutting-edge solutions.
+        </template>
+      </BaseSectionHeader>
       <div class="flex flex-wrap justify-center mt-12">
         <BaseIcon
           v-for="icon in ICONS"
@@ -26,6 +25,7 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from "vue";
+import BaseSectionHeader from "../BaseSectionHeader.vue";
 import BaseIcon from "../BaseIcon.vue";
 import { ICONS } from "./enums";
 import { useObserver } from "../../composables/useObserver";
