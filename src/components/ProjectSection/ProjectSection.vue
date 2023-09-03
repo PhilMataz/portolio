@@ -6,9 +6,8 @@
     <BaseSectionHeader>
       Recent Projects
       <template #sub-header
-        >Always evolving, always learning.<br />
-        I continuously update my skill set to offer cutting-edge
-        solutions.</template
+        >From Concept to Code.<br />
+        Projects that highlight my frontend journey.</template
       >
     </BaseSectionHeader>
     <div class="grid sm:grid-rows-2 sm:grid-cols-2 gap-2 w-full mt-12 lg:px-12">

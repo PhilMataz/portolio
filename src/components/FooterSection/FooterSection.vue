@@ -28,10 +28,7 @@
         class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-rose-400 after:border after:border-t-0"
       >
         <FooterSectionSocials
-          :class="{
-            'opacity-100': scrollProgress > 0.1,
-            'opacity-0': scrollProgress <= 0.1,
-          }"
+          :class="scrollProgress > 0.1 ? 'opacity-100' : 'opacity-0'"
         />
 
         <div

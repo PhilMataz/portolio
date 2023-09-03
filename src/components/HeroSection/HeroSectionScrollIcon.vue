@@ -1,10 +1,7 @@
 <template>
   <lottie-player
     class="mx-auto mb-4 mt-4 sm:mt-auto transition-opacity"
-    :class="{
-      'opacity-100': scrollProgress < 0.1,
-      'opacity-0': scrollProgress >= 0.1,
-    }"
+    :class="scrollProgress < 0.02 ? 'opacity-100' : 'opacity-0'"
     autoplay
     loop
     mode="normal"
