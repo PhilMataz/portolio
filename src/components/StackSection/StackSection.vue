@@ -13,12 +13,15 @@
         </template>
       </BaseSectionHeader>
       <div class="flex flex-wrap justify-center mt-12">
-        <BaseIcon
-          v-for="icon in ICONS"
-          :icon="icon"
-          size="lg"
-          class="fill-rose-400 w-1/4 md:w-[calc(100%/7)] mt-8"
-        />
+        <div
+          v-for="{ icon, label } in ICONS"
+          class="flex flex-col items-center w-1/4 md:w-[calc(100%/7)] mt-8"
+        >
+          <BaseIcon :icon="icon" size="lg" class="fill-rose-400" />
+          <span class="text-xs text-rose-400 font-bold mt-0.5">{{
+            label
+          }}</span>
+        </div>
       </div>
     </div>
   </section>
