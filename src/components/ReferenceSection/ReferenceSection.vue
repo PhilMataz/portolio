@@ -9,7 +9,11 @@
       >
     </BaseSectionHeader>
     <div class="sm:grid sm:grid-cols-2 sm:gap-12 max-w-screen-md mt-12">
-      <div class="relative px-4 pt-8 mb-8 sm:mb-0">
+      <div
+        v-for="({ name, role, image, text }, index) in REFERENCE_DATA"
+        class="relative px-4 pt-8"
+        :class="{ ['mb-8 sm:mb-0']: index === 0 }"
+      >
         <span
           class="text-9xl font-exo-2 font-bold absolute top-0 left-0 text-gray-700"
           >“</span
@@ -18,58 +22,19 @@
           class="w-24 h-24 bg-rose-400 rounded-full float-right ml-4 shadow-inner overflow-hidden"
         >
           <img
-            class="object-contain"
-            src="/david.png"
+            class="object-contain w-24 h-24"
+            :src="image"
             alt="Portrait of David Müller, Founder & Senior Software Architect at Hakobu"
           />
         </div>
         <p class="text-justify mt-10 text-gray-600">
-          I have had the privilege of working closely with Phillip for over a
-          year. He is an exceptional Software Architect who combines a keen
-          attention to detail with strong team-oriented skills. Phillip not only
-          excels in a collaborative environment but also possesses the
-          leadership capabilities needed to propel a team toward its objectives.
-          He has a unique ability to transform abstract concepts into
-          fully-realized, functional software solutions. I highly recommend
-          Phillip for any software development projects you may have in mind.
+          {{ text }}
         </p>
         <div class="flex flex-row mt-4">
           <p class="font-normal">-&nbsp;</p>
           <div>
-            <p class="font-normal">David Müller</p>
-            <p class="text-sm">Founder & Senior Software Architect - Hakobu</p>
-          </div>
-        </div>
-      </div>
-      <div class="relative px-4 pt-8">
-        <span
-          class="text-9xl font-exo-2 font-bold absolute top-0 left-0 text-gray-700"
-          >“</span
-        >
-        <div
-          class="w-24 h-24 bg-rose-400 rounded-full float-right ml-4 shadow-inner overflow-hidden"
-        >
-          <img
-            class="object-contain"
-            src="/chi.png"
-            alt="Portrait of Chi Nguyen, Senior Frontend Engineer at Mercedes-Benz.io"
-          />
-        </div>
-
-        <p class="text-justify mt-10 text-gray-600">
-          I have the pleasure to work with Phillip in a flagship project which
-          successfully generated millions of dollars for over a year and I would
-          wholeheartedly recommend Phillip for his outstanding Vue.js (JS/TS)
-          and problem solving skills. Phillip's attention to detail ensures
-          top-notch solutions, while his collaborative nature enriches team
-          dynamics. He consistently produces high-quality work and is an asset
-          to any project.
-        </p>
-        <div class="flex flex-row mt-4">
-          <p class="font-normal">-&nbsp;</p>
-          <div>
-            <p class="font-normal">Chi Nguyen</p>
-            <p class="text-sm">Senior Frontend Engineer - Mercedes-Benz.io</p>
+            <p class="font-normal">{{ name }}</p>
+            <p class="text-sm">{{ role }}</p>
           </div>
         </div>
       </div>
@@ -78,4 +43,19 @@
 </template>
 <script lang="ts" setup>
 import BaseSectionHeader from "../BaseSectionHeader.vue";
+
+const REFERENCE_DATA = [
+  {
+    name: "David Müller",
+    role: "Founder & Senior Software Architect - Hakobu",
+    image: "/david.png",
+    text: "I have had the privilege of working closely with Phillip for over a year. He is an exceptional Software Architect who combines a keen attention to detail with strong team-oriented skills. Phillip not only excels in a collaborative environment but also possesses the leadership capabilities needed to propel a team toward its objectives. He has a unique ability to transform abstract concepts into fully-realized, functional software solutions. I highly recommend Phillip for any software development projects you may have in mind.",
+  },
+  {
+    name: "Chi Nguyen",
+    role: "Senior Frontend Engineer - Mercedes-Benz.io",
+    image: "/chi.png",
+    text: "I have the pleasure to work with Phillip in a flagship project which successfully generated millions of dollars for over a year and I would wholeheartedly recommend Phillip for his outstanding Vue.js (JS/TS) and problem solving skills. Phillip's attention to detail ensures top-notch solutions, while his collaborative nature enriches team dynamics. He consistently produces high-quality work and is an asset to any project.",
+  },
+];
 </script>
