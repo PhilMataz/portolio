@@ -19,7 +19,7 @@
         >
           <img
             class="object-contain"
-            src="/public/david.png"
+            src="/david.png"
             alt="Portrait of David Müller, Founder & Senior Software Architect at Hakobu"
           />
         </div>
@@ -51,7 +51,7 @@
         >
           <img
             class="object-contain"
-            src="/public/chi.png"
+            src="/chi.png"
             alt="Portrait of Chi Nguyen, Senior Frontend Engineer at Mercedes-Benz.io"
           />
         </div>
