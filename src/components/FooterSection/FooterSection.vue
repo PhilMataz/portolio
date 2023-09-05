@@ -17,13 +17,13 @@
           class="mr-8 mb-4 sm:mb-0"
           title="Write me"
           href="mailto:hello@philmataz.dev"
-          ariaLabel="Send an email to hello@philmataz.dev"
+          ariaLabel="Write me an email to hello@philmataz.dev"
           icon="envelope"
         ></FooterSectionContactLink>
         <FooterSectionContactLink
           title="+49 1590 656 2753"
           href="https://wa.me/4915906562753"
-          ariaLabel="Send a WhatsApp message to +4915906562753"
+          ariaLabel="Send a WhatsApp message to +49 1590 656 2753"
           icon="whatsapp"
         ></FooterSectionContactLink>
       </div>
@@ -57,7 +57,7 @@
               href="https://code.visualstudio.com"
               title="VSCode"
               class="font-jetbrains text-gray-400 text-xxs"
-              ariaLabel="Visit Visual Studio Code's official website"
+              ariaLabel="Visit VSCode's official website"
             ></BaseLink
             >, by yours truly. Built using
             <BaseLink
