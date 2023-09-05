@@ -17,7 +17,11 @@
         <div
           class="w-24 h-24 bg-rose-400 rounded-full float-right ml-4 shadow-inner overflow-hidden"
         >
-          <img class="object-contain" src="/public/david.png" alt="" />
+          <img
+            class="object-contain"
+            src="/public/david.png"
+            alt="Portrait of David Müller, Founder & Senior Software Architect at Hakobu"
+          />
         </div>
         <p class="text-justify mt-10 text-gray-600">
           I have had the privilege of working closely with Phillip for over a
@@ -45,7 +49,11 @@
         <div
           class="w-24 h-24 bg-rose-400 rounded-full float-right ml-4 shadow-inner overflow-hidden"
         >
-          <img class="object-contain" src="/public/chi.png" alt="" />
+          <img
+            class="object-contain"
+            src="/public/chi.png"
+            alt="Portrait of Chi Nguyen, Senior Frontend Engineer at Mercedes-Benz.io"
+          />
         </div>
 
         <p class="text-justify mt-10 text-gray-600">
