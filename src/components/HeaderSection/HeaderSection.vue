@@ -41,29 +41,13 @@
       </div>
     </div>
     <Transition>
-      <div
-        v-if="isMenuOpened"
-        class="z-10 fixed h-screen w-screen backdrop-blur-md flex flex-col justify-between px-2 sm:hidden"
-      >
-        <div class="flex flex-col mt-16">
-          <BaseLink
-            v-for="{ title, href } in BASE_LINKS"
-            :title="title"
-            :href="href"
-            class="px-4 text-6xl font-black my-6"
-            client:load
-            @click.prevent="handleClick(href)"
-          ></BaseLink>
-        </div>
-        <div
-          class="h-3 mb-4 block left-0 w-full rounded-b-lg border-rose-400 border border-t-0"
-        ></div>
-      </div>
+      <HeaderSectionMobileMenu v-if="isMenuOpened" @click="handleClick" />
     </Transition>
   </header>
 </template>
 <script lang="ts" setup>
 import { ref, onMounted, type Ref, computed, watch, nextTick } from "vue";
+import HeaderSectionMobileMenu from "./HeaderSectionMobileMenu.vue";
 import BaseLink from "../BaseLink.vue";
 import { useObserver } from "../../composables/useObserver";
 import type Lenis from "@studio-freight/lenis";
@@ -113,9 +97,6 @@ const handleMenuClick = () => {
   isMenuOpened.value = !isMenuOpened.value;
 };
 
-const menuTitle = computed(() => {
-  return isMenuOpened.value ? "Close" : "Menu";
-});
 watch(isMenuOpened, (value) => {
   if (value) {
     lenis.value?.stop();

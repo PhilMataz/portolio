@@ -1,5 +1,8 @@
 <template>
-  <section id="contact" class="bg-gray-900 pt-12 pb-4 px-2 sm:px-4">
+  <section
+    id="contact"
+    class="section--dark bg-gray-900 pt-12 pb-4 px-2 sm:px-4"
+  >
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <BaseSectionHeader dark>
         Let’s craft digital excellence
