@@ -3,11 +3,11 @@
     <div
       class="z-20 fixed w-screen after:z-10 after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-rose-400 after:border after:border-b-0 px-2 sm:px-4"
     >
-      <div></div>
-      <div
-        class="backdrop-blur-sm w-full"
-        :class="isMenuOpened ? 'backdrop-blur-md' : 'backdrop-blur-sm'"
-      >
+      <div class="relative">
+        <div
+          class="-z-10 w-full h-16 absolute"
+          :class="isMenuOpened ? 'backdrop-blur-md' : 'backdrop-blur-sm'"
+        ></div>
         <nav
           class="w-full max-w-screen-lg mx-auto font-jetbrains font-normal h-16 flex justify-end items-center ease-in-out transition-colors duration-100"
           :class="isIntersecting ? 'text-stone-50' : 'text-gray-700'"
