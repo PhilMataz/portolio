@@ -8,11 +8,12 @@
         >Hear from those who've experienced my craft firsthand.</template
       >
     </BaseSectionHeader>
-    <div class="sm:grid sm:grid-cols-2 sm:gap-12 max-w-screen-md mt-12">
+    <div
+      class="grid gap-8 grid-cols- 2 grid-cols-1 sm:grid-cols-2 sm:gap-12 max-w-screen-md mt-12"
+    >
       <div
-        v-for="({ name, role, image, text }, index) in REFERENCE_DATA"
+        v-for="{ name, role, image, text } in REFERENCE_DATA"
         class="relative px-4 pt-8"
-        :class="{ ['mb-8 sm:mb-0']: index === 0 }"
       >
         <span
           class="text-9xl font-exo-2 font-bold absolute top-0 left-0 text-gray-700"
