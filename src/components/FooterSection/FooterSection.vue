@@ -16,7 +16,7 @@
         <FooterSectionContactLink
           class="mr-8 mb-4 sm:mb-0"
           title="Write me"
-          href="mailto:phillip.matambanadzo@kisscoders.ruhr"
+          href="mailto:hello@philmataz.dev"
           icon="envelope"
         ></FooterSectionContactLink>
         <FooterSectionContactLink
