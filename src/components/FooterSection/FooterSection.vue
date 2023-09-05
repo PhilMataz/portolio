@@ -17,11 +17,13 @@
           class="mr-8 mb-4 sm:mb-0"
           title="Write me"
           href="mailto:hello@philmataz.dev"
+          ariaLabel="Send an email to hello@philmataz.dev"
           icon="envelope"
         ></FooterSectionContactLink>
         <FooterSectionContactLink
           title="+49 1590 656 2753"
           href="https://wa.me/4915906562753"
+          ariaLabel="Send a WhatsApp message to +4915906562753"
           icon="whatsapp"
         ></FooterSectionContactLink>
       </div>
@@ -47,6 +49,7 @@
               href="https://figma.com"
               class="font-jetbrains text-gray-400 text-xxs"
               title="Figma"
+              ariaLabel="Visit Figma's official website"
             ></BaseLink
             >, coded in
             <BaseLink
@@ -54,6 +57,7 @@
               href="https://code.visualstudio.com"
               title="VSCode"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit Visual Studio Code's official website"
             ></BaseLink
             >, by yours truly. Built using
             <BaseLink
@@ -61,6 +65,7 @@
               href="https://astro.build/"
               title="Astro"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit Astro's official website"
             ></BaseLink>
             and
             <BaseLink
@@ -68,6 +73,7 @@
               href="https://tailwindcss.com/"
               title="Tailwind"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit Tailwind's official website"
             ></BaseLink
             >, and rolled out on
             <BaseLink
@@ -75,6 +81,7 @@
               href="https://www.netlify.com/"
               title="Netlify"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit Netlify's official website"
             ></BaseLink
             >. Fonts chosen are
             <BaseLink
@@ -82,6 +89,7 @@
               href="https://fonts.google.com/specimen/Roboto"
               title="Roboto"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit Roboto font specimen on Google Fonts"
             ></BaseLink
             >,
             <BaseLink
@@ -89,6 +97,7 @@
               href="https://fonts.google.com/specimen/Exo+2"
               :title="`Exo\xa02`"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit Exo 2 font specimen on Google Fonts"
             ></BaseLink>
             and
             <BaseLink
@@ -96,6 +105,7 @@
               href="https://fonts.google.com/specimen/JetBrains+Mono"
               :title="`JetBrains\xa0Mono`"
               class="font-jetbrains text-gray-400 text-xxs"
+              ariaLabel="Visit JetBrains Mono font specimen on Google Fonts"
             ></BaseLink
             >.
           </p>

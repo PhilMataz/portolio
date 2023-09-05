@@ -3,6 +3,7 @@
     class="font-jetbrains font-normal"
     :href="href"
     :target="target"
+    :aria-label="ariaLabel"
     @mouseover="handleMouseOver"
     @mouseleave="handleMouseLeave"
     @click="handleClick"
@@ -17,6 +18,7 @@ interface Props {
   href: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
   scrollTo?: boolean;
+  ariaLabel?: string;
 }
 
 const emit = defineEmits(["click"]);
@@ -24,6 +26,7 @@ const emit = defineEmits(["click"]);
 const props = withDefaults(defineProps<Props>(), {
   target: "_self",
   scrollTo: false,
+  ariaLabel: "",
 });
 
 const { displayValue, handleMouseOver, handleMouseLeave } = useHoverAnimation(

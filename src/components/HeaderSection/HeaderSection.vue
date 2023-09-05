@@ -19,6 +19,8 @@
           <Transition mode="out-in">
             <BaseLink
               v-if="!isMenuOpened"
+              ariaLabel="Open menu"
+              aria-expanded="false"
               class="px-4 sm:hidden"
               title="Menu"
               href="#"
@@ -27,6 +29,8 @@
             <BaseLink
               v-else
               class="px-4 sm:hidden"
+              aria-label="Close menu"
+              aria-expanded="true"
               title="Close"
               href="#"
               @click.prevent="handleMenuClick"
@@ -34,9 +38,10 @@
           </Transition>
 
           <BaseLink
-            v-for="{ title, href } in BASE_LINKS"
+            v-for="{ title, href, ariaLabel } in BASE_LINKS"
             :title="title"
             :href="href"
+            :ariaLabel="ariaLabel"
             class="px-4 hidden sm:inline-flex"
             client:load
             @click.prevent="handleClick(href)"
@@ -65,18 +70,22 @@ const BASE_LINKS = [
   {
     title: "About Me",
     href: "#hero",
+    ariaLabel: "Navigate to Hero Section",
   },
   {
-    title: "Projects",
+    title: "My Work",
     href: "#projects",
+    ariaLabel: "Navigate to My Work Section",
   },
   {
     title: "My Stack",
     href: "#stack",
+    ariaLabel: "Navigate to My Stack Section",
   },
   {
     title: "Contact",
     href: "#contact",
+    ariaLabel: "Navigate to Hero Section",
   },
 ];
 

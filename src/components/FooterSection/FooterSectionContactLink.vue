@@ -1,6 +1,7 @@
 <template>
   <a
     :href="href"
+    :aria-label="ariaLabel"
     target="_blank"
     class="group flex items-center"
     @mouseenter="handleMouseOver"
@@ -29,6 +30,7 @@ interface Props {
   title: string;
   icon: string;
   href: string;
+  ariaLabel: string;
 }
 
 const props = defineProps<Props>();
