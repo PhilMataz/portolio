@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-10 fixed h-screen w-screen backdrop-blur-md flex flex-col justify-between px-2 sm:hidden"
+    class="z-10 fixed h-screen w-screen backdrop-blur-md flex flex-col justify-between px-2 sm:hidden mt-16"
   >
     <div class="flex flex-col mt-16">
       <BaseLink
@@ -15,6 +15,7 @@
         @click.prevent="handleClick(href)"
       ></BaseLink>
     </div>
+
     <div
       class="h-3 mb-4 block left-0 w-full rounded-b-lg border-rose-400 border border-t-0"
     ></div>

@@ -7,7 +7,7 @@
         {{ name }}
       </h3>
       <p class="text-gray-500">{{ date }}</p>
-      <p class="my-6 line-clamp-4">
+      <p class="my-6 text-sm">
         {{ description }}
       </p>
       <div class="flex flex-wrap mt-auto">

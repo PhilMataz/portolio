@@ -5,9 +5,13 @@
     >
       <div class="relative">
         <div
-          class="-z-10 w-full h-16 absolute"
-          :class="isMenuOpened ? 'backdrop-blur-md' : 'backdrop-blur-sm'"
+          class="-z-10 w-screen h-16 absolute backdrop-blur-sm -mx-2 sm:-mx-4"
         ></div>
+        <div
+          v-if="isMenuOpened"
+          class="-z-10 w-screen h-16 absolute backdrop-blur-md -mx-2 sm:hidden"
+        ></div>
+
         <nav
           class="w-full max-w-screen-lg mx-auto font-jetbrains font-normal h-16 flex justify-end items-center ease-in-out transition-colors duration-100"
           :class="isIntersecting ? 'text-stone-50' : 'text-gray-700'"
@@ -108,7 +112,7 @@ watch(isMenuOpened, (value) => {
 <style>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.33s ease;
+  transition: opacity 0.3s ease;
 }
 
 .v-enter-from,

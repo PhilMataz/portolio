@@ -30,7 +30,7 @@ const projects = [
     name: "Senior Frontend Engineer | Mercedes-Benz.io",
     date: "01/2022 - 09/2022 (1 year, 9 months)",
     description:
-      "Together with an international team of frontend, backend and devops engineers, I've contributed to the development of the Mercedes Me web storefront.",
+      "Together with an international team of frontend, backend, and devops engineers, I played a key role in modernizing the Mercedes Connect web store. During this endeavor, I led the transition from Vue 2 to Vue 3 and introduced TypeScript, ensuring a more robust and scalable platform.",
     skills: [
       "Vue",
       "Typescript",
@@ -47,7 +47,7 @@ const projects = [
     name: "Senior Fullstack Engineer | auteon",
     date: "10/2021 - 04/2022 (6 months)",
     description:
-      "I developed a proof of concept reverse engineering automotive eCommerce websites to create a web scraping service. After its completion, Itrained several developers on its implementation and usage.",
+      "I developed a proof-of-concept by reverse engineering automotive eCommerce platforms, resulting in a web scraping service. After completing this, I trained several developers, guiding them through its efficient implementation and usage to ensure optimal results.",
     skills: [
       "Vue",
       "Typescript",
@@ -64,7 +64,7 @@ const projects = [
     name: "Lead Fullstack Engineer | Ruhrkraft",
     date: "09/2020 - 09/2021 (1 year)",
     description:
-      "I was responsible for the design and implementation of a scheduler for a Digital Signage Content Management System. The main goal of this scheduler was to offer users a straightforward platform for planning, scheduling, and uploading advertisement campaigns. Once uploaded, these campaigns were then seamlessly displayed on multimedia screens across various locations.",
+      "In my role, I designed and implemented a scheduler for a Digital Signage CMS. This tool was crafted to enable users to efficiently plan, schedule, and upload advertisement campaigns. Once these campaigns were set, they were showcased on multimedia screens across different venues.",
     skills: [
       "Vue",
       "Typescript",
@@ -79,7 +79,7 @@ const projects = [
     name: "Fullstack Engineer | Westend Druckereibetriebe",
     date: "01/2018 - 07/2021 (3 year, 6 months)",
     description:
-      "At this prominent printing firm, Iwas responsible for enhancing and streamlining their digital operations. My primary tasks included the design and implementation of an order placement application. This application served as a vital touchpoint between the company and its clientele. Additionally, I was tasked with building an end-to-end and unit testing suite to ensure the application's reliability and functionality.",
+      "At a leading printing company, I played a pivotal role in optimizing their digital operations. I designed and implemented an order application, which became essential for client interactions. Furthermore, I established an extensive testing suite, guaranteeing the software's performance and robustness.",
     skills: [
       "Vue",
       "Javascript",

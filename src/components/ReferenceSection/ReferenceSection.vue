@@ -61,7 +61,7 @@
           <p class="font-normal">-&nbsp;</p>
           <div>
             <p class="font-normal">Chi Nguyen</p>
-            <p class="text-sm">Founder Frontend Engineer - Mercedes-Benz.io</p>
+            <p class="text-sm">Senior Frontend Engineer - Mercedes-Benz.io</p>
           </div>
         </div>
       </div>
