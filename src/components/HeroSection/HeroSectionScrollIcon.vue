@@ -19,7 +19,7 @@ lenis.on("scroll", ({ progress }: { progress: number }) => {
   scrollProgress.value = progress;
 });
 onMounted(() => {
-  if (typeof window !== "undefined" && lottiePlayer.value) {
+  if (lottiePlayer.value) {
     animation = bodymovin.loadAnimation({
       container: lottiePlayer.value,
       path: "scroll-animation.json",

@@ -13,7 +13,7 @@
       <div class="flex flex-wrap mt-auto">
         <div
           v-for="skill in skills"
-          class="mr-1 mt-1 rounded-full bg-rose-100 font-bold text-sm text-rose-400 inline-flex h-7 items-center px-4"
+          class="mr-1 mt-1 rounded-full bg-rose-50 font-bold text-sm text-rose-400 inline-flex h-7 items-center px-4"
         >
           {{ skill }}
         </div>

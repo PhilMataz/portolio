@@ -10,88 +10,38 @@
         Projects that highlight my frontend journey.</template
       >
     </BaseSectionHeader>
-    <div class="grid sm:grid-rows-2 sm:grid-cols-2 gap-2 w-full mt-12 lg:px-12">
-      <ProjectSectionCard
-        v-for="project in projects"
-        :name="project.name"
-        :date="project.date"
-        :description="project.description"
-        :skills="project.skills"
-      />
+    <div class="w-full mt-12 lg:px-12">
+      <div class="grid sm:grid-rows-2 sm:grid-cols-2 gap-2">
+        <ProjectSectionCard
+          v-for="project in PROJECTS"
+          :name="project.name"
+          :date="project.date"
+          :description="project.description"
+          :skills="project.skills"
+        />
+      </div>
+      <div class="w-full flex items-center mt-8 sm:justify-end">
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          aria-label="View my full resume"
+          class="relative inline-flex h-14 font-jetbrains uppercase font-bold text-gray-600 px-6 items-center after:rounded-tr hover:after:rounded before:rounded-bl before:hover:rounded after:h-2 after:w-3/5 after:top-0 after:right-0 after:border-t after:border-r after:border-gray-500 after:absolute before:h-2 before:w-3/5 before:bottom-0 before:left-0 before:border-b before:border-l before:border-gray-500 before:absolute hover:before:w-full hover:before:h-full before:transition-all hover:after:w-full hover:after:h-full after:transition-all"
+          @mouseover="handleMouseOver"
+          @mouseleave="handleMouseLeave"
+        >
+          {{ displayValue }}
+        </a>
+      </div>
     </div>
   </section>
 </template>
 <script lang="ts" setup>
+import BaseLink from "../BaseLink.vue";
 import BaseSectionHeader from "../BaseSectionHeader.vue";
 import ProjectSectionCard from "./ProjectSectionCard.vue";
+import { PROJECTS } from "./enums";
+import { useHoverAnimation } from "../../composables/useHoverAnimation";
 
-const projects = [
-  {
-    name: "Senior Frontend Engineer | Mercedes-Benz.io",
-    date: "01/2022 - 09/2022 (1 year, 9 months)",
-    description:
-      "Together with an international team of frontend, backend, and devops engineers, I played a key role in modernizing the Mercedes Connect web store. During this endeavor, I led the transition from Vue 2 to Vue 3 and introduced TypeScript, ensuring a more robust and scalable platform.",
-    skills: [
-      "Vue",
-      "Typescript",
-      "Pinia",
-      "VueX",
-      "Vite",
-      "Jenkins",
-      "Vitest",
-      "Github",
-      "Kubernetes",
-    ],
-  },
-  {
-    name: "Senior Fullstack Engineer | auteon",
-    date: "10/2021 - 04/2022 (6 months)",
-    description:
-      "I developed a proof-of-concept by reverse engineering automotive eCommerce platforms, resulting in a web scraping service. After completing this, I trained several developers, guiding them through its efficient implementation and usage to ensure optimal results.",
-    skills: [
-      "Vue",
-      "Typescript",
-      "Google Cloud Functions",
-      "Node.js",
-      "Cheerio",
-      "Pupeteer",
-      "Postman",
-      "GraphQL",
-      "Hasura",
-    ],
-  },
-  {
-    name: "Lead Fullstack Engineer | Ruhrkraft",
-    date: "09/2020 - 09/2021 (1 year)",
-    description:
-      "In my role, I designed and implemented a scheduler for a Digital Signage CMS. This tool was crafted to enable users to efficiently plan, schedule, and upload advertisement campaigns. Once these campaigns were set, they were showcased on multimedia screens across different venues.",
-    skills: [
-      "Vue",
-      "Typescript",
-      "VueX",
-      "Meteor",
-      "Node.js",
-      "Jest",
-      "MongoDB",
-    ],
-  },
-  {
-    name: "Fullstack Engineer | Westend Druckereibetriebe",
-    date: "01/2018 - 07/2021 (3 year, 6 months)",
-    description:
-      "At a leading printing company, I played a pivotal role in optimizing their digital operations. I designed and implemented an order application, which became essential for client interactions. Furthermore, I established an extensive testing suite, guaranteeing the software's performance and robustness.",
-    skills: [
-      "Vue",
-      "Javascript",
-      "React",
-      "VueX",
-      "Cypress",
-      "Jest",
-      "Docker",
-      "Node.js",
-      "Meteor",
-      "MongoDB",
-    ],
-  },
-];
+const { displayValue, handleMouseOver, handleMouseLeave } =
+  useHoverAnimation("Full Resume");
 </script>
