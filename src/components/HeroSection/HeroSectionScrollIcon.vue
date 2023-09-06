@@ -6,18 +6,15 @@
   ></div>
 </template>
 <script lang="ts" setup>
-import { onMounted, onUnmounted } from "vue";
-import { lenis } from "../../scripts/lenis";
-import { ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import bodymovin, { type AnimationItem } from "lottie-web";
 
-const scrollProgress = ref(0);
+import { useLenis } from "../../composables/useLenis";
+
+const { scrollProgress } = useLenis();
 const lottiePlayer = ref(null);
 let animation: AnimationItem | null = null;
 
-lenis.on("scroll", ({ progress }: { progress: number }) => {
-  scrollProgress.value = progress;
-});
 onMounted(() => {
   if (lottiePlayer.value) {
     animation = bodymovin.loadAnimation({

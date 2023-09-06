@@ -120,16 +120,7 @@ import FooterSectionSocials from "./FooterSectionSocials.vue";
 import BaseLink from "../BaseLink.vue";
 import BaseSectionHeader from "../BaseSectionHeader.vue";
 
-import { lenis } from "../../scripts/lenis";
-import { onMounted, ref } from "vue";
+import { useLenis } from "../../composables/useLenis";
 
-const scrollProgress = ref(0);
-
-onMounted(() => {
-  scrollProgress.value = lenis?.progress || 0;
-});
-
-lenis.on("scroll", ({ progress }: { progress: number }) => {
-  scrollProgress.value = progress;
-});
+const { scrollProgress } = useLenis();
 </script>

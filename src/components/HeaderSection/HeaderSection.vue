@@ -55,13 +55,12 @@
   </header>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted, type Ref, computed, watch, nextTick } from "vue";
+import { ref, watch, nextTick } from "vue";
 import HeaderSectionMobileMenu from "./HeaderSectionMobileMenu.vue";
 import BaseLink from "../BaseLink.vue";
 import { useObserver } from "../../composables/useObserver";
-import type Lenis from "@studio-freight/lenis";
+import { useLenis } from "../../composables/useLenis";
 
-let lenis: Ref<Lenis | null> = ref(null);
 const isMenuOpened = ref(false);
 
 const { isIntersecting } = useObserver();
@@ -89,20 +88,14 @@ const BASE_LINKS = [
   },
 ];
 
-onMounted(() => {
-  import("../../scripts/lenis").then((module) => {
-    lenis.value = module.lenis;
-  });
-});
+const { scrollTo, start, stop } = useLenis();
 
 const handleClick = (target: string) => {
   if (isMenuOpened.value) {
     isMenuOpened.value = false;
   }
   nextTick(() => {
-    if (lenis.value) {
-      lenis.value.scrollTo(target, { offset: -64 });
-    }
+    scrollTo(target, { offset: -64 });
   });
 };
 
@@ -112,9 +105,9 @@ const handleMenuClick = () => {
 
 watch(isMenuOpened, (value) => {
   if (value) {
-    lenis.value?.stop();
+    stop();
   } else {
-    lenis.value?.start();
+    start();
   }
 });
 </script>
