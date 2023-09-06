@@ -121,9 +121,13 @@ import BaseLink from "../BaseLink.vue";
 import BaseSectionHeader from "../BaseSectionHeader.vue";
 
 import { lenis } from "../../scripts/lenis";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 const scrollProgress = ref(0);
+
+onMounted(() => {
+  scrollProgress.value = lenis?.progress || 0;
+});
 
 lenis.on("scroll", ({ progress }: { progress: number }) => {
   scrollProgress.value = progress;
