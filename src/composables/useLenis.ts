@@ -14,7 +14,6 @@ export const useLenis = () => {
         lenis.value?.raf(time);
         requestAnimationFrame(raf);
       }
-      console.log(lenis.value.on);
       requestAnimationFrame(raf);
     }
     scrollProgress.value = lenis.value?.progress || 0;
