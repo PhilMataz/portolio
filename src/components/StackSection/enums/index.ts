@@ -1,51 +1,55 @@
 export const ICONS = [
   {
-    icon: "vue",
-    label: "Vue",
+    icon: 'vue',
+    label: 'Vue',
   },
   {
-    icon: "react",
-    label: "React",
+    icon: 'nuxt',
+    label: 'Nuxt',
   },
   {
-    icon: "html",
-    label: "HTML",
+    icon: 'react',
+    label: 'React',
   },
   {
-    icon: "css",
-    label: "CSS",
+    icon: 'html',
+    label: 'HTML',
   },
   {
-    icon: "javascript",
-    label: "JavaScript",
+    icon: 'css',
+    label: 'CSS',
   },
   {
-    icon: "typescript",
-    label: "TypeScript",
+    icon: 'javascript',
+    label: 'JavaScript',
   },
   {
-    icon: "node",
-    label: "Node",
+    icon: 'typescript',
+    label: 'TypeScript',
   },
   {
-    icon: "git",
-    label: "Git",
+    icon: 'node',
+    label: 'Node',
   },
   {
-    icon: "aws",
-    label: "AWS",
+    icon: 'git',
+    label: 'Git',
   },
   {
-    icon: "kubernetes",
+    icon: 'aws',
+    label: 'AWS',
+  },
+  {
+    icon: 'kubernetes',
 
-    label: "Kubernetes",
+    label: 'Kubernetes',
   },
   {
-    icon: "mongodb",
-    label: "MongoDB",
+    icon: 'mongodb',
+    label: 'MongoDB',
   },
   {
-    icon: "docker",
-    label: "Docker",
+    icon: 'docker',
+    label: 'Docker',
   },
 ];
