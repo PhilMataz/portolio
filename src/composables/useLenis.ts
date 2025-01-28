@@ -1,5 +1,5 @@
-import Lenis from "@studio-freight/lenis";
-import { onMounted, ref, type Ref } from "vue";
+import Lenis from '@studio-freight/lenis';
+import { onMounted, ref, type Ref } from 'vue';
 
 const scrollProgress = ref(0);
 const lenis: Ref<Lenis | null> = ref(null);
@@ -10,16 +10,16 @@ export const useLenis = () => {
         smoothTouch: true,
         smoothWheel: true,
       });
-      function raf(time: number) {
+      const raf = (time: number) => {
         lenis.value?.raf(time);
         requestAnimationFrame(raf);
-      }
+      };
       requestAnimationFrame(raf);
     }
     scrollProgress.value = lenis.value?.progress || 0;
   });
 
-  lenis.value?.on("scroll", ({ progress }: { progress: number }) => {
+  lenis.value?.on('scroll', ({ progress }: { progress: number }) => {
     scrollProgress.value = progress;
   });
 

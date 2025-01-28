@@ -47,7 +47,7 @@
             <BaseLink
               target="_blank"
               href="https://figma.com"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               title="Figma"
               ariaLabel="Visit Figma's official website"
             ></BaseLink
@@ -56,7 +56,7 @@
               target="_blank"
               href="https://code.visualstudio.com"
               title="VSCode"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit VSCode's official website"
             ></BaseLink
             >, by yours truly. Built using
@@ -64,7 +64,7 @@
               target="_blank"
               href="https://astro.build/"
               title="Astro"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit Astro's official website"
             ></BaseLink>
             and
@@ -72,7 +72,7 @@
               target="_blank"
               href="https://tailwindcss.com/"
               title="Tailwind"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit Tailwind's official website"
             ></BaseLink
             >, and rolled out on
@@ -80,7 +80,7 @@
               target="_blank"
               href="https://www.netlify.com/"
               title="Netlify"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit Netlify's official website"
             ></BaseLink
             >. Fonts chosen are
@@ -88,7 +88,7 @@
               target="_blank"
               href="https://fonts.google.com/specimen/Roboto"
               title="Roboto"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit Roboto font specimen on Google Fonts"
             ></BaseLink
             >,
@@ -96,7 +96,7 @@
               target="_blank"
               href="https://fonts.google.com/specimen/Exo+2"
               :title="`Exo\xa02`"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit Exo 2 font specimen on Google Fonts"
             ></BaseLink>
             and
@@ -104,7 +104,7 @@
               target="_blank"
               href="https://fonts.google.com/specimen/JetBrains+Mono"
               :title="`JetBrains\xa0Mono`"
-              class="font-jetbrains text-gray-400 text-xxs"
+              class="font-mono text-gray-400 text-xxs"
               ariaLabel="Visit JetBrains Mono font specimen on Google Fonts"
             ></BaseLink
             >.
@@ -115,10 +115,10 @@
   </section>
 </template>
 <script lang="ts" setup>
-import FooterSectionContactLink from "./FooterSectionContactLink.vue";
-import FooterSectionSocials from "./FooterSectionSocials.vue";
 import BaseLink from "../BaseLink.vue";
 import BaseSectionHeader from "../BaseSectionHeader.vue";
+import FooterSectionContactLink from "./FooterSectionContactLink.vue";
+import FooterSectionSocials from "./FooterSectionSocials.vue";
 
 import { useLenis } from "../../composables/useLenis";
 

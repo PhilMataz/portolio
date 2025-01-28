@@ -1,6 +1,6 @@
 <template>
   <a
-    class="font-jetbrains font-normal"
+    class="font-mono font-normal"
     :href="href"
     :target="target"
     :aria-label="ariaLabel"
@@ -11,29 +11,27 @@
   >
 </template>
 <script lang="ts" setup>
-import { useHoverAnimation } from "../composables/useHoverAnimation";
+import { useHoverAnimation } from '../composables/useHoverAnimation';
 
 interface Props {
   title: string;
   href: string;
-  target?: "_blank" | "_self" | "_parent" | "_top";
+  target?: '_blank' | '_self' | '_parent' | '_top';
   scrollTo?: boolean;
   ariaLabel?: string;
 }
 
-const emit = defineEmits(["click"]);
+const emit = defineEmits(['click']);
 
 const props = withDefaults(defineProps<Props>(), {
-  target: "_self",
+  target: '_self',
   scrollTo: false,
-  ariaLabel: "",
+  ariaLabel: '',
 });
 
-const { displayValue, handleMouseOver, handleMouseLeave } = useHoverAnimation(
-  props.title
-);
+const { displayValue, handleMouseOver, handleMouseLeave } = useHoverAnimation(props.title);
 
 const handleClick = (event: MouseEvent) => {
-  emit("click", event);
+  emit('click', event);
 };
 </script>

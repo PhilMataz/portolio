@@ -13,7 +13,7 @@
         ></div>
 
         <nav
-          class="w-full max-w-screen-lg mx-auto font-jetbrains font-normal h-16 flex justify-end items-center ease-in-out transition-colors duration-100"
+          class="w-full max-w-screen-lg mx-auto font-mono font-normal h-16 flex justify-end items-center ease-in-out transition-colors duration-100"
           :class="isIntersecting ? 'text-stone-50' : 'text-gray-700'"
         >
           <Transition mode="out-in">
@@ -55,11 +55,11 @@
   </header>
 </template>
 <script lang="ts" setup>
-import { ref, watch, nextTick } from "vue";
-import HeaderSectionMobileMenu from "./HeaderSectionMobileMenu.vue";
-import BaseLink from "../BaseLink.vue";
-import { useObserver } from "../../composables/useObserver";
+import { nextTick, ref, watch } from "vue";
 import { useLenis } from "../../composables/useLenis";
+import { useObserver } from "../../composables/useObserver";
+import BaseLink from "../BaseLink.vue";
+import HeaderSectionMobileMenu from "./HeaderSectionMobileMenu.vue";
 
 const isMenuOpened = ref(false);
 

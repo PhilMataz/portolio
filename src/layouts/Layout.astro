@@ -1,8 +1,9 @@
 ---
-import "@fontsource-variable/jetbrains-mono";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource-variable/exo-2";
+import '../styles/global.css';
+import '@fontsource-variable/jetbrains-mono';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource-variable/exo-2';
 
 interface Props {
   title: string;
@@ -48,10 +49,7 @@ const { title } = Astro.props;
 
     <!-- Twitter Tags (For Twitter sharing) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Phillip Matambanadzo | Senior Frontend Developer"
-    />
+    <meta name="twitter:title" content="Phillip Matambanadzo | Senior Frontend Developer" />
     <meta
       name="twitter:description"
       content="Phillip Matambanadzo (Phil Mataz) - Senior Frontend Developer specializing in creating intuitive, user-centric digital experiences. Explore projects, expertise in UI/UX, and a unique blend of passions from blockchain to dance."

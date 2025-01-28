@@ -1,23 +1,23 @@
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567891" as const;
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567891' as const;
 
 export const useHoverAnimation = (initialValue: string) => {
-  let interval: number | null = null;
+  let interval: Timer | null = null;
   const displayValue = ref(initialValue);
 
   const handleMouseOver = () => {
     let iterations = 0;
     interval = setInterval(() => {
       displayValue.value = initialValue
-        .split("")
+        .split('')
         .map((_, index) => {
           if (index < iterations) {
             return initialValue[index];
           }
           return LETTERS[Math.floor(Math.random() * LETTERS.length)];
         })
-        .join("");
+        .join('');
       if (iterations >= initialValue.length && interval) {
         clearInterval(interval);
       }

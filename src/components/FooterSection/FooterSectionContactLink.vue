@@ -17,14 +17,14 @@
         size="sm"
       ></BaseIcon>
     </div>
-    <span class="font-jetbrains font-normal text-gray-400 ml-4">{{
+    <span class="font-mono font-normal text-gray-400 ml-4">{{
       displayValue
     }}</span>
   </a>
 </template>
 <script lang="ts" setup>
-import BaseIcon from "../BaseIcon.vue";
 import { useHoverAnimation } from "../../composables/useHoverAnimation";
+import BaseIcon from "../BaseIcon.vue";
 
 interface Props {
   title: string;
