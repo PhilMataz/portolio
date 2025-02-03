@@ -16,9 +16,9 @@
       </div>
       <div class="w-full flex items-center mt-8 sm:justify-end">
         <a
-          href="/cv"
+          href="/resume.pdf"
           aria-label="View my full resume"
-          class="relative inline-flex h-14 font-mono uppercase font-bold text-blue-grey-600 px-6 items-center after:rounded-tr hover:after:rounded before:rounded-bl before:hover:rounded after:h-2 after:w-3/5 after:top-0 after:right-0 after:border-t after:border-r after:border-blue-grey-500 after:absolute before:h-2 before:w-3/5 before:bottom-0 before:left-0 before:border-b before:border-l before:border-blue-grey-500 before:absolute hover:before:w-full hover:before:h-full before:transition-all hover:after:w-full hover:after:h-full after:transition-all"
+          class="relative inline-flex h-14 font-mono uppercase font-bold text-blue-grey-600 px-6 items-center after:rounded-tr hover:after:rounded before:rounded-bl hover:before:rounded after:h-2 after:w-3/5 after:top-0 after:right-0 after:border-t after:border-r after:border-blue-grey-500 after:absolute before:h-2 before:w-3/5 before:bottom-0 before:left-0 before:border-b before:border-l before:border-blue-grey-500 before:absolute hover:before:w-full hover:before:h-full before:transition-all hover:after:w-full hover:after:h-full after:transition-all"
           @mouseover="handleMouseOver"
           @mouseleave="handleMouseLeave"
         >
