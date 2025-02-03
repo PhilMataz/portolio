@@ -10,14 +10,14 @@
         :title="title"
         :href="href"
         class="px-4 text-6xl font-black my-6"
-        :class="isOverlapping(id) ? 'text-gray-100' : ''"
+        :class="isOverlapping(id) ? 'text-blue-grey-100' : ''"
         client:load
         @click.prevent="handleClick(href)"
       ></BaseLink>
     </div>
 
     <div
-      class="h-3 mb-4 block left-0 w-full rounded-b-lg border-rose-400 border border-t-0"
+      class="h-3 mb-4 block left-0 w-full rounded-b-lg border-red-vivid-300 border border-t-0"
     ></div>
   </div>
 </template>

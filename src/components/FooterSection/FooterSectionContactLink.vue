@@ -9,15 +9,15 @@
     @click.stop
   >
     <div
-      class="w-10 h-10 rounded-full bg-gray-700 inline-flex items-center justify-center"
+      class="w-10 h-10 rounded-full bg-blue-grey-700 inline-flex items-center justify-center"
     >
       <BaseIcon
-        class="group-hover:translate-x-px group-hover:-translate-y-px transition-transform"
+        class="group-hover:tranblue-grey-x-px group-hover:-tranblue-grey-y-px transition-transform"
         :icon="icon"
         size="sm"
       ></BaseIcon>
     </div>
-    <span class="font-mono font-normal text-gray-400 ml-4">{{
+    <span class="font-mono font-normal text-blue-grey-400 ml-4">{{
       displayValue
     }}</span>
   </a>

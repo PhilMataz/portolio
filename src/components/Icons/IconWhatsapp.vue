@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="fill-gray-400"
+    class="fill-blue-grey-400"
     width="24"
     height="24"
     viewBox="0 0 64 64"

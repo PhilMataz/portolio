@@ -1,7 +1,7 @@
 <template>
   <header id="navigation">
     <div
-      class="z-20 fixed w-screen after:z-10 after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-rose-400 after:border after:border-b-0 px-2 sm:px-4"
+      class="z-20 fixed w-screen after:z-10 after:w-full after:h-3 after:bottom-0 after:block after:max-w-screen-lg after:mx-auto after:rounded-t-lg after:border-red-vivid-300 after:border after:border-b-0 px-2 sm:px-4"
     >
       <div class="relative">
         <div
@@ -14,7 +14,7 @@
 
         <nav
           class="w-full max-w-screen-lg mx-auto font-mono font-normal h-16 flex justify-end items-center ease-in-out transition-colors duration-100"
-          :class="isIntersecting ? 'text-stone-50' : 'text-gray-700'"
+          :class="isIntersecting ? 'text-stone-50' : 'text-blue-grey-700'"
         >
           <Transition mode="out-in">
             <BaseLink

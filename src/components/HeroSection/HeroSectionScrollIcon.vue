@@ -6,10 +6,10 @@
   ></div>
 </template>
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref } from "vue";
-import bodymovin, { type AnimationItem } from "lottie-web";
+import bodymovin, { type AnimationItem } from 'lottie-web';
+import { onMounted, onUnmounted, ref } from 'vue';
 
-import { useLenis } from "../../composables/useLenis";
+import { useLenis } from '../../composables/useLenis';
 
 const { scrollProgress } = useLenis();
 const lottiePlayer = ref(null);
@@ -19,8 +19,8 @@ onMounted(() => {
   if (lottiePlayer.value) {
     animation = bodymovin.loadAnimation({
       container: lottiePlayer.value,
-      path: "scroll-animation.json",
-      renderer: "svg",
+      path: 'scroll-animation-red-vivid.json',
+      renderer: 'svg',
       loop: true,
       autoplay: true,
     });

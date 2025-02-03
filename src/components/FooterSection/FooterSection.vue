@@ -1,7 +1,7 @@
 <template>
   <section
     id="contact"
-    class="section--dark bg-gray-900 pt-12 pb-4 px-2 sm:px-4"
+    class="section--dark bg-blue-grey-900 pt-12 pb-4 px-2 sm:px-4"
   >
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <BaseSectionHeader dark>
@@ -30,14 +30,14 @@
     </div>
     <div class="mt-40 relative max-w-screen-lg w-full mx-auto">
       <div
-        class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-rose-400 after:border after:border-t-0"
+        class="relative after:absolute after:bottom-0 after:h-3 after:block after:left-0 after:w-full after:rounded-b-lg after:border-red-vivid-300 after:border after:border-t-0"
       >
         <FooterSectionSocials
           :class="scrollProgress > 0.1 ? 'opacity-100' : 'opacity-0'"
         />
 
         <div
-          class="z-5 text-sm text-gray-500 px-2 pb-1 flex justify-between flex-col-reverse sm:flex-row"
+          class="z-5 text-sm text-blue-grey-500 px-2 pb-1 flex justify-between flex-col-reverse sm:flex-row"
         >
           <p class="inline-flex items-end">
             &copy; Phillip Matambanadzo - 2023
@@ -47,7 +47,7 @@
             <BaseLink
               target="_blank"
               href="https://figma.com"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               title="Figma"
               ariaLabel="Visit Figma's official website"
             ></BaseLink
@@ -56,7 +56,7 @@
               target="_blank"
               href="https://code.visualstudio.com"
               title="VSCode"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit VSCode's official website"
             ></BaseLink
             >, by yours truly. Built using
@@ -64,7 +64,7 @@
               target="_blank"
               href="https://astro.build/"
               title="Astro"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit Astro's official website"
             ></BaseLink>
             and
@@ -72,7 +72,7 @@
               target="_blank"
               href="https://tailwindcss.com/"
               title="Tailwind"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit Tailwind's official website"
             ></BaseLink
             >, and rolled out on
@@ -80,7 +80,7 @@
               target="_blank"
               href="https://www.netlify.com/"
               title="Netlify"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit Netlify's official website"
             ></BaseLink
             >. Fonts chosen are
@@ -88,7 +88,7 @@
               target="_blank"
               href="https://fonts.google.com/specimen/Roboto"
               title="Roboto"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit Roboto font specimen on Google Fonts"
             ></BaseLink
             >,
@@ -96,7 +96,7 @@
               target="_blank"
               href="https://fonts.google.com/specimen/Exo+2"
               :title="`Exo\xa02`"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit Exo 2 font specimen on Google Fonts"
             ></BaseLink>
             and
@@ -104,7 +104,7 @@
               target="_blank"
               href="https://fonts.google.com/specimen/JetBrains+Mono"
               :title="`JetBrains\xa0Mono`"
-              class="font-mono text-gray-400 text-xxs"
+              class="font-mono text-blue-grey-400 text-xxs"
               ariaLabel="Visit JetBrains Mono font specimen on Google Fonts"
             ></BaseLink
             >.

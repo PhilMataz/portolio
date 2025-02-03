@@ -6,9 +6,9 @@
     </BaseSectionHeader>
     <div class="grid gap-8 grid-cols- 2 grid-cols-1 sm:grid-cols-2 sm:gap-12 max-w-screen-md mt-12">
       <div v-for="{ name, role, image, text } in REFERENCE_DATA" class="relative px-4 pt-8">
-        <span class="text-9xl font-display font-bold absolute top-0 left-0 text-gray-700">“</span>
+        <span class="text-9xl font-display font-bold absolute top-0 left-0 text-blue-grey-700">“</span>
         <div
-          class="w-24 h-24 bg-rose-400 rounded-full float-right ml-4 shadow-inner overflow-hidden"
+          class="w-24 h-24 bg-red-vivid-300 rounded-full float-right ml-4 shadow-inner overflow-hidden"
         >
           <img
             class="object-contain w-24 h-24"
@@ -16,7 +16,7 @@
             alt="Portrait of David Müller, Founder & Senior Software Architect at Hakobu"
           />
         </div>
-        <p class="text-justify mt-10 text-gray-600">
+        <p class="text-justify mt-10 text-blue-grey-600">
           {{ text }}
         </p>
         <div class="flex flex-row mt-4">

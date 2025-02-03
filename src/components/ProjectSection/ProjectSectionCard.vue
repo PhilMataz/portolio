@@ -4,34 +4,28 @@
   >
     <div class="flex flex-col p-4">
       <h3 class="font-medium text-lg">
-        {{ name }}
+        {{ project.title }}
       </h3>
-      <p class="text-gray-500">{{ date }}</p>
+      <p class="text-blue-grey-500">{{ project.duration }}</p>
       <p class="my-6 text-sm">
-        {{ description }}
+        {{ project.description }}
       </p>
-      <div class="flex flex-wrap mt-auto">
-        <div
-          v-for="skill in skills"
-          class="mr-1 mt-1 rounded-full bg-rose-50 font-bold text-sm text-rose-400 inline-flex h-7 items-center px-4"
+      <div class="flex flex-wrap mt-auto gap-1">
+        <span
+          v-for="skill in project.technologies"
+          class="inline-flex items-center rounded-full bg-red-vivid-50 px-2 py-1 text-xs font-medium text-red-vivid-700 ring-1 ring-inset ring-red-vivid-600/10"
+          >{{ skill }}</span
         >
-          {{ skill }}
-        </div>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { toRefs } from "vue";
+import type { InferEntrySchema } from 'astro:content';
 
 interface Props {
-  name: string;
-  date: string;
-  description: string;
-  skills: string[];
+  project: InferEntrySchema<'projects'>;
 }
 
-const props = defineProps<Props>();
-
-const { name, date, description, skills } = toRefs(props);
+defineProps<Props>();
 </script>

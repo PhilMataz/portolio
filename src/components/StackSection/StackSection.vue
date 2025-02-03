@@ -2,7 +2,7 @@
   <section
     id="stack"
     ref="rootElement"
-    class="section--dark bg-gray-900 pt-12 pb-24 lg:px-0 px-2 sm:px-4"
+    class="section--dark bg-blue-grey-900 pt-12 pb-24 lg:px-0 px-2 sm:px-4"
   >
     <div class="max-w-screen-sm mx-auto flex flex-col items-center">
       <BaseSectionHeader dark>
@@ -17,8 +17,8 @@
           v-for="{ icon, label } in ICONS"
           class="flex flex-col items-center w-1/4 md:w-[calc(100%/7)] mt-8"
         >
-          <BaseIcon :icon="icon" size="lg" class="fill-rose-400" />
-          <span class="text-xs text-rose-400 font-bold mt-0.5">{{
+          <BaseIcon :icon="icon" size="lg" class="fill-red-vivid-300" />
+          <span class="text-xs text-red-vivid-300 font-bold mt-0.5">{{
             label
           }}</span>
         </div>
@@ -28,10 +28,10 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import BaseSectionHeader from "../BaseSectionHeader.vue";
-import BaseIcon from "../BaseIcon.vue";
-import { ICONS } from "./enums";
 import { useObserver } from "../../composables/useObserver";
+import BaseIcon from "../BaseIcon.vue";
+import BaseSectionHeader from "../BaseSectionHeader.vue";
+import { ICONS } from "./enums";
 
 const rootElement = ref(null);
 const { registerElement, unregisterElement } = useObserver();

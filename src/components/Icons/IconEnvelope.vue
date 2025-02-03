@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="fill-gray-400 hover:translate-x-0.5 hover:-translate-y-0.5 transition-transform"
+    class="fill-blue-grey-400 hover:tranblue-grey-x-0.5 hover:-tranblue-grey-y-0.5 transition-transform"
     width="24"
     height="24"
     version="1.1"
