@@ -3,9 +3,7 @@
     class="flex items-stretch rounded-lg relative before:absolute before:w-full before:top-0 before:border before:border-rose-400 before:border-b-0 before:h-4 before:rounded-t-lg after:absolute after:w-full after:bottom-0 after:border after:border-rose-400 after:border-t-0 after:h-4 after:rounded-b-lg"
   >
     <div class="flex flex-col p-4">
-      <h3 class="font-medium text-lg">
-        {{ project.title }}
-      </h3>
+      <h3 class="font-medium text-lg">{{ project.title }} &middot; {{ project.company }}</h3>
       <p class="text-blue-grey-500">{{ project.duration }}</p>
       <p class="my-6 text-sm">
         {{ project.description }}
